@@ -1,6 +1,1 @@
-[
-  { "id": 3794401, "name": "tarefa analise do rn", "done": false },
-  { "id": 8078437, "name": "comprar racao da kyra", "done": false },
-  { "id": 2399242, "name": "teste", "done": false },
-  { "id": 1919209, "name": "falar com a minha mãe", "done": true }
-]
+[{"id":3794401,"name":"tarefa analise do rn","done":false},{"id":8078437,"name":"comprar racao da kyra","done":false},{"id":2399242,"name":"teste","done":false},{"id":1919209,"name":"falar com a minha mãe","done":true},{"id":480388,"name":"passear com a kyra","done":false},{"id":2650562,"name":"Comprar condicionador","done":true}]

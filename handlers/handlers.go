@@ -20,19 +20,14 @@ func AddTask(taskName string) (*entities.Task, error) {
 
 	newId := int64(rand.Intn(10000000))
 
-	task := entities.Task{
-		Id:   newId,
-		Name: taskName,
-		Done: false,
-	}
+	task := entities.NewTask()
+	task.WithID(newId).WithName(taskName).WithDone(false)
 
-	tasks = append(tasks, task)
-
+	tasks = append(tasks, *task)
 	if err := saveTasks(tasks); err != nil {
 		return nil, err
 	}
-
-	return &task, nil
+	return task, nil
 }
 
 func saveTasks(tasks []entities.Task) error {

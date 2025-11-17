@@ -10,12 +10,27 @@ type Task struct {
 	Done bool `json:"done"`
 }
 
-func NewTask() Task {
-	return Task{
+func NewTask() *Task {
+	return &Task{
 		Id: 0,
 		Name: "",
 		Done: false,
 	}
+}
+
+func (t *Task) WithID(id int64) *Task {
+	t.Id = id
+	return t
+}
+
+func (t *Task) WithName(taskName string) *Task {
+	t.Name = taskName
+	return t
+}
+
+func (t *Task) WithDone(done bool) *Task {
+	t.Done = done 
+	return t
 }
 
 func NewTaskWithName(taskName string) (Task, error) {
